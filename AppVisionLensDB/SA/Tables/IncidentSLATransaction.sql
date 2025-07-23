@@ -1,0 +1,27 @@
+﻿CREATE TABLE [SA].[IncidentSLATransaction] (
+    [SLATransactionId]              INT             IDENTITY (1, 1) NOT NULL,
+    [SLATransactionIncidentNumber]  NVARCHAR (15)   NOT NULL,
+    [SLATransactionPriority]        NVARCHAR (100)  DEFAULT (NULL) NULL,
+    [SLATransactionAssignmentGroup] NVARCHAR (100)  DEFAULT (NULL) NULL,
+    [Tower]                         NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [SLATransactionStatus]          NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [SLATransactionOpenOn]          DATETIME        DEFAULT (NULL) NULL,
+    [AcknowledgedOn]                DATETIME        DEFAULT (NULL) NULL,
+    [SLATransactionResolvedOn]      DATETIME        DEFAULT (NULL) NULL,
+    [PendingTime]                   INT             DEFAULT (NULL) NULL,
+    [ResponseSLA]                   INT             DEFAULT (NULL) NULL,
+    [ResolutionSLA]                 INT             DEFAULT (NULL) NULL,
+    [ResponseSLAMiss]               NVARCHAR (5)    DEFAULT (NULL) NULL,
+    [ResolutionSLAMiss]             NVARCHAR (5)    DEFAULT (NULL) NULL,
+    [ReassginmentCount]             INT             DEFAULT (NULL) NULL,
+    [AssignedTo]                    NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [SLATransactionMonth]           INT             DEFAULT (NULL) NULL,
+    [Tier]                          INT             DEFAULT (NULL) NULL,
+    [AgingBy]                       DECIMAL (18, 2) DEFAULT (NULL) NULL,
+    [RemainingTime]                 INT             DEFAULT (NULL) NULL,
+    [SLATransactionLastUpdate]      DATETIME        DEFAULT (NULL) NULL,
+    [SLATransactionCluster]         NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [SLATransactionCreatedOn]       DATETIME        DEFAULT (NULL) NULL,
+    PRIMARY KEY CLUSTERED ([SLATransactionId] ASC)
+);
+

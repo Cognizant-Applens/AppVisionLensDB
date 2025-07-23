@@ -1,0 +1,28 @@
+﻿CREATE TABLE [ML].[InfraTicketValidation] (
+    [ID]                           BIGINT         IDENTITY (1, 1) NOT NULL,
+    [ProjectID]                    BIGINT         NOT NULL,
+    [TicketID]                     NVARCHAR (50)  NOT NULL,
+    [TicketDescription]            NVARCHAR (MAX) NULL,
+    [TowerID]                      BIGINT         NULL,
+    [DebtClassificationID]         BIGINT         NULL,
+    [AvoidableFlagID]              INT            NULL,
+    [ResidualDebtID]               BIGINT         NULL,
+    [CauseCodeID]                  BIGINT         NULL,
+    [ResolutionCodeID]             BIGINT         NULL,
+    [OptionalField]                NVARCHAR (MAX) NULL,
+    [CreatedBy]                    NVARCHAR (50)  NULL,
+    [CreatedDate]                  DATETIME       NULL,
+    [ModifiedBy]                   NVARCHAR (50)  NULL,
+    [ModifiedDate]                 DATETIME       NULL,
+    [IsDeleted]                    BIT            NOT NULL,
+    [TicketSourceFrom]             NVARCHAR (20)  CONSTRAINT [Df_ML_InfraTicketValidation_TicketSourceFrom] DEFAULT ('ML') NULL,
+    [TicketDescriptionBasePattern] NVARCHAR (250) CONSTRAINT [DF_InfraTicketValidation_TicketDescriptionBasePattern] DEFAULT (NULL) NULL,
+    [TicketDescriptionSubPattern]  NVARCHAR (250) CONSTRAINT [DF_InfraTicketValidation_TicketDescriptionSubPattern] DEFAULT (NULL) NULL,
+    [ResolutionRemarksBasePattern] NVARCHAR (250) CONSTRAINT [DF_InfraTicketValidation_ResolutionRemarksBasePattern] DEFAULT (NULL) NULL,
+    [ResolutionRemarksSubPattern]  NVARCHAR (250) CONSTRAINT [DF_InfraTicketValidation_ResolutionRemarksSubPattern] DEFAULT (NULL) NULL,
+    [InitialLearningID]            BIGINT         NULL,
+    [DescriptionText]              NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK__InfraTicketVa__3214EC276C36325F] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_InfraTicketValidation] FOREIGN KEY ([InitialLearningID]) REFERENCES [ML].[InfraConfigurationProgress] ([ID])
+);
+

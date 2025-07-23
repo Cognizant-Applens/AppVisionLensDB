@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[Timesheetdetail_data_check] (
+    [TimesheetId]         BIGINT         NOT NULL,
+    [TimeTickerID]        BIGINT         NOT NULL,
+    [ApplicationID]       BIGINT         NOT NULL,
+    [TicketID]            NVARCHAR (500) NULL,
+    [ShiftId]             INT            NULL,
+    [IsNonTicket]         INT            NULL,
+    [ServiceID]           INT            NOT NULL,
+    [CategoryId]          INT            NULL,
+    [activityid]          INT            NULL,
+    [TicketTypeMapID]     BIGINT         NULL,
+    [Hours]               NVARCHAR (500) NULL,
+    [Remarks]             NVARCHAR (500) NULL,
+    [IsAttributeUpdated]  INT            NULL,
+    [TicketSourceID]      INT            NULL,
+    [IsSDTicket]          INT            NULL,
+    [ProjectId]           BIGINT         NOT NULL,
+    [IsDeleted]           VARCHAR (1)    NOT NULL,
+    [CreatedBy]           VARCHAR (18)   NOT NULL,
+    [CreatedDateTime]     DATETIME       NOT NULL,
+    [ModifiedBy]          VARCHAR (6)    NOT NULL,
+    [ModifiedDateTime]    DATETIME       NOT NULL,
+    [SuggestedActivityID] INT            NULL
+);
+

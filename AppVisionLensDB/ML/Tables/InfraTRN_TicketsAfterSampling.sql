@@ -1,0 +1,28 @@
+﻿CREATE TABLE [ML].[InfraTRN_TicketsAfterSampling] (
+    [ID]                    BIGINT          IDENTITY (1, 1) NOT NULL,
+    [InitialLearningId]     BIGINT          NULL,
+    [ProjectID]             INT             NOT NULL,
+    [TicketID]              NVARCHAR (50)   NULL,
+    [TicketDescription]     NVARCHAR (MAX)  NULL,
+    [TowerID]               INT             NULL,
+    [TechnologyID]          INT             NULL,
+    [DebtClassificationID]  INT             NULL,
+    [AvoidableFlagID]       INT             NULL,
+    [ResidualDebtID]        INT             NULL,
+    [CauseCodeID]           INT             NULL,
+    [ResolutionCodeID]      INT             NULL,
+    [CreatedBy]             NVARCHAR (50)   NULL,
+    [CreatedDate]           DATETIME        NULL,
+    [ModifiedBy]            NVARCHAR (50)   NULL,
+    [ModifiedDate]          DATETIME        NULL,
+    [IsDeleted]             BIT             NULL,
+    [TicketPattern]         NVARCHAR (200)  NULL,
+    [AdditionalText]        NVARCHAR (200)  NULL,
+    [DebtClassifiedBy]      TINYINT         CONSTRAINT [DF_InfraTRN_TicketsAfterSampling_DebtClassifiedBy] DEFAULT ((2)) NOT NULL,
+    [Desc_Base_WorkPattern] NVARCHAR (1000) NULL,
+    [Desc_Sub_WorkPattern]  NVARCHAR (1000) NULL,
+    [Res_Base_WorkPattern]  NVARCHAR (1000) NULL,
+    [Res_Sub_WorkPattern]   NVARCHAR (1000) NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

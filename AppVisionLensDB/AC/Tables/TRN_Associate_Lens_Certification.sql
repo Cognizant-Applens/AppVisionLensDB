@@ -1,0 +1,27 @@
+﻿CREATE TABLE [AC].[TRN_Associate_Lens_Certification] (
+    [CertificationId]          BIGINT         IDENTITY (1, 1) NOT NULL,
+    [CategoryId]               INT            NOT NULL,
+    [AwardId]                  INT            NOT NULL,
+    [EmployeeId]               NVARCHAR (50)  NOT NULL,
+    [AccountId]                BIGINT         NOT NULL,
+    [EsaProjectId]             NVARCHAR (50)  NULL,
+    [ProjectID]                BIGINT         NOT NULL,
+    [Designation]              NVARCHAR (500) NULL,
+    [CertificationMonth]       TINYINT        NOT NULL,
+    [CertificationYear]        SMALLINT       NOT NULL,
+    [NoOfATicketsClosed]       INT            DEFAULT ((0)) NULL,
+    [NoOfHTicketsClosed]       INT            DEFAULT ((0)) NULL,
+    [IncReductionMonth]        INT            DEFAULT ((0)) NULL,
+    [EffortReductionMonth]     INT            DEFAULT ((0)) NULL,
+    [SolutionIdentified]       INT            DEFAULT ((0)) NULL,
+    [NoOfKEDBCreatedApproved]  INT            DEFAULT ((0)) NULL,
+    [NoOfCodeAssetContributed] INT            DEFAULT ((0)) NULL,
+    [Isdeleted]                BIT            NOT NULL,
+    [CreatedDate]              DATETIME       NOT NULL,
+    [CreatedBy]                NVARCHAR (50)  NOT NULL,
+    [ModifiedDate]             DATETIME       NULL,
+    [ModifiedBy]               NVARCHAR (50)  NULL,
+    [IsRated]                  BIT            NULL,
+    PRIMARY KEY CLUSTERED ([CertificationId] ASC)
+);
+

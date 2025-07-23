@@ -1,0 +1,26 @@
+﻿CREATE TABLE [ADM].[AppInventoryCognizant_Upload] (
+    [ID]                     BIGINT         IDENTITY (1, 1) NOT NULL,
+    [ApplicationName]        NVARCHAR (100) NULL,
+    [ApplicationScope]       NVARCHAR (300) NULL,
+    [IsRevenue]              NVARCHAR (10)  NULL,
+    [IsAnySIVendor]          NVARCHAR (10)  NULL,
+    [GeographiesSupported]   NVARCHAR (500) NULL,
+    [FunctionalKnowledge]    NVARCHAR (150) NULL,
+    [ExecutionMethod]        NVARCHAR (500) NULL,
+    [OtherExecutionMethod]   NVARCHAR (250) NULL,
+    [SourceCodeAvailability] NVARCHAR (150) NULL,
+    [RegulatoryBody]         NVARCHAR (150) NULL,
+    [OtherRegulatoryBody]    NVARCHAR (250) NULL,
+    [IsAppAvailable]         NVARCHAR (10)  NULL,
+    [AvailabilityPercent]    DECIMAL (5, 2) NULL,
+    [IsCognizant]            BIT            NULL,
+    [CustomerId]             NVARCHAR (50)  NULL,
+    [IsValid]                NVARCHAR (10)  NULL,
+    [IsDeleted]              BIT            NULL,
+    [CreatedBy]              NVARCHAR (50)  NOT NULL,
+    [CreatedDate]            DATETIME       NOT NULL,
+    [ModifiedBy]             NVARCHAR (50)  NULL,
+    [ModifiedDate]           DATETIME       NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

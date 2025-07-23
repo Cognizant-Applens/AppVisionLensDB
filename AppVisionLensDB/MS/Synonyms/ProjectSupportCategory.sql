@@ -1,0 +1,1 @@
+﻿CREATE SYNONYM [MS].[ProjectSupportCategory] FOR [$(MainspringDB)].[MS].[ProjectSupportCategory]

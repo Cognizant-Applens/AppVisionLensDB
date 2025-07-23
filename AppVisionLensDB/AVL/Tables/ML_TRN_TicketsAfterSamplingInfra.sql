@@ -1,0 +1,26 @@
+﻿CREATE TABLE [AVL].[ML_TRN_TicketsAfterSamplingInfra] (
+    [ID]                    BIGINT          IDENTITY (1, 1) NOT NULL,
+    [InitialLearningId]     BIGINT          NULL,
+    [ProjectID]             BIGINT          NOT NULL,
+    [TicketID]              NVARCHAR (50)   NULL,
+    [TicketDescription]     NVARCHAR (MAX)  NULL,
+    [TowerID]               BIGINT          NULL,
+    [DebtClassificationID]  INT             NULL,
+    [AvoidableFlagID]       INT             NULL,
+    [ResidualDebtID]        INT             NULL,
+    [CauseCodeID]           BIGINT          NULL,
+    [ResolutionCodeID]      BIGINT          NULL,
+    [TicketPattern]         NVARCHAR (4000) NULL,
+    [AdditionalText]        NVARCHAR (4000) NULL,
+    [Desc_Base_WorkPattern] NVARCHAR (1000) NULL,
+    [Desc_Sub_WorkPattern]  NVARCHAR (1000) NULL,
+    [Res_Base_WorkPattern]  NVARCHAR (1000) NULL,
+    [Res_Sub_WorkPattern]   NVARCHAR (1000) NULL,
+    [IsDeleted]             BIT             NULL,
+    [CreatedBy]             NVARCHAR (50)   NULL,
+    [CreatedDate]           DATETIME        NULL,
+    [ModifiedBy]            NVARCHAR (50)   NULL,
+    [ModifiedDate]          DATETIME        NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

@@ -1,0 +1,3 @@
+﻿CREATE TYPE [AVL].[IDList] AS TABLE (
+    [ID] BIGINT NULL);
+

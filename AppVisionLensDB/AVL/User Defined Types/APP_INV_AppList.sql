@@ -1,0 +1,3 @@
+﻿CREATE TYPE [AVL].[APP_INV_AppList] AS TABLE (
+    [ID] BIGINT NOT NULL);
+

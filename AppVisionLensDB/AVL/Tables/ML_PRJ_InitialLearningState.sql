@@ -1,0 +1,27 @@
+﻿CREATE TABLE [AVL].[ML_PRJ_InitialLearningState] (
+    [ID]                               BIGINT         IDENTITY (1000, 1) NOT NULL,
+    [ProjectID]                        INT            NOT NULL,
+    [StartDate]                        DATETIME       NULL,
+    [EndDate]                          DATETIME       NULL,
+    [IsSamplingSentOrReceived]         NVARCHAR (500) NULL,
+    [IsSamplingInProgress]             NVARCHAR (500) NULL,
+    [IsMLSentOrReceived]               NVARCHAR (500) NULL,
+    [SentBy]                           NVARCHAR (20)  NULL,
+    [SentOn]                           DATETIME       NULL,
+    [ReceivedFrom]                     NVARCHAR (20)  NULL,
+    [ReceivedOn]                       DATETIME       NULL,
+    [CreatedBy]                        NVARCHAR (20)  NULL,
+    [CreatedDate]                      DATETIME       NULL,
+    [ModifiedBy]                       NVARCHAR (20)  NULL,
+    [ModifiedDate]                     DATETIME       NULL,
+    [IsDeleted]                        BIT            NULL,
+    [IsSDTicket]                       BIT            NULL,
+    [IsDartTicket]                     BIT            NULL,
+    [IsNoiseEliminationSentorReceived] NVARCHAR (500) NULL,
+    [OptionalFieldupl]                 NVARCHAR (500) NULL,
+    [IsNoiseSkipped]                   BIT            NULL,
+    [IsRegenerated]                    BIT            NULL,
+    [IsMultiLingualTranslated]         INT            NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

@@ -1,0 +1,1 @@
+﻿CREATE SYNONYM [MS].[OutBoundValueDetails] FOR [$(MainspringDB)].[MS].[OutBoundValueDetails]

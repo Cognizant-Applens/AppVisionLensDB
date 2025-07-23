@@ -1,0 +1,21 @@
+﻿CREATE TYPE [ML].[TVP_TicketsAutoClassification] AS TABLE (
+    [AssignmentGroupId]        BIGINT          NULL,
+    [Category]                 NVARCHAR (MAX)  NULL,
+    [CausecodeId]              BIGINT          NULL,
+    [Comments]                 NVARCHAR (1000) NULL,
+    [Flex Field (1)]           NVARCHAR (MAX)  NULL,
+    [Flex Field (2)]           NVARCHAR (MAX)  NULL,
+    [Flex Field (3)]           NVARCHAR (MAX)  NULL,
+    [Flex Field (4)]           NVARCHAR (MAX)  NULL,
+    [KEDB Available Indicator] BIGINT          NULL,
+    [Related Tickets]          NVARCHAR (50)   NULL,
+    [Release Type]             BIGINT          NULL,
+    [ResolutionCodeId]         BIGINT          NULL,
+    [Resolution Remarks]       NVARCHAR (MAX)  NULL,
+    [TicketDescription]        NVARCHAR (MAX)  NULL,
+    [TicketsourceId]           BIGINT          NULL,
+    [Ticket Summary]           NVARCHAR (MAX)  NULL,
+    [Ticket Type Id]           BIGINT          NULL,
+    [BatchProcessId]           BIGINT          NOT NULL,
+    [TicketId]                 NVARCHAR (50)   NOT NULL);
+

@@ -1,0 +1,28 @@
+﻿CREATE TABLE [SA].[InformationTransaction] (
+    [Id]                   INT            IDENTITY (1, 1) NOT NULL,
+    [ApplicationId]        BIGINT         NOT NULL,
+    [TechnologyId]         BIGINT         NULL,
+    [SubjectArea]          NVARCHAR (100) NOT NULL,
+    [ProcessName]          NVARCHAR (100) NULL,
+    [SessionName]          NVARCHAR (100) NULL,
+    [ActualStartDate]      DATE           NULL,
+    [ActualStartTime]      DATETIME       NULL,
+    [ActualEndTime]        DATETIME       NULL,
+    [Duration]             INT            NULL,
+    [SuccessfulRecords]    INT            NULL,
+    [FailureRecords]       INT            NULL,
+    [SuccessfulSourceRows] INT            NULL,
+    [FailureSourceRows]    INT            NULL,
+    [ErrorCode]            NVARCHAR (100) NULL,
+    [ErrorMessage]         NVARCHAR (MAX) NULL,
+    [RunStatus]            NVARCHAR (100) NULL,
+    [ActualStartDateKey]   INT            NULL,
+    [ActualStartTimeKey]   INT            NULL,
+    [ActualEndTimeKey]     INT            NULL,
+    [DAPId]                INT            NULL,
+    [Comments]             VARCHAR (MAX)  NULL,
+    [SchedulerSessionId]   VARCHAR (400)  NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC) WITH (FILLFACTOR = 80),
+    CONSTRAINT [FK_InformationTransaction_APP_MAS_PrimaryTechnology] FOREIGN KEY ([TechnologyId]) REFERENCES [AVL].[APP_MAS_PrimaryTechnology] ([PrimaryTechnologyID])
+);
+

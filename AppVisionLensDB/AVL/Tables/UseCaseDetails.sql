@@ -1,0 +1,26 @@
+﻿CREATE TABLE [AVL].[UseCaseDetails] (
+    [Id]                    INT             IDENTITY (1, 1) NOT NULL,
+    [UseCaseId]             NVARCHAR (50)   NOT NULL,
+    [UseCaseTitle]          NVARCHAR (250)  NOT NULL,
+    [BUID]                  BIGINT          NOT NULL,
+    [CustomerID]            BIGINT          NOT NULL,
+    [ReferenceID]           NVARCHAR (50)   NULL,
+    [ApplicationID]         BIGINT          NULL,
+    [TechnologyID]          BIGINT          NULL,
+    [BusinessProcessID]     BIGINT          NULL,
+    [SubBusinessProcessID]  BIGINT          NULL,
+    [ToolName]              NVARCHAR (25)   NULL,
+    [ServiceID]             INT             NULL,
+    [AutomationFeasibility] DECIMAL (18, 2) NULL,
+    [OverAllEffortSpent]    DECIMAL (18, 2) NULL,
+    [UseCaseStatusId]       INT             NULL,
+    [IsManuallyCreated]     BIT             NULL,
+    [IsDeleted]             BIT             NULL,
+    [CreatedBy]             NVARCHAR (50)   NULL,
+    [CreatedOn]             DATETIME        NULL,
+    [ModifiedBy]            NVARCHAR (50)   NULL,
+    [ModifiedOn]            DATETIME        NULL,
+    CONSTRAINT [PK_UseCaseDetails] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_UseCaseDetails_UseCaseDetails] FOREIGN KEY ([UseCaseStatusId]) REFERENCES [AVL].[UseCaseStatus] ([Id])
+);
+

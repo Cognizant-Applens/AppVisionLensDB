@@ -1,0 +1,27 @@
+﻿CREATE TABLE [PP].[BestPractices] (
+    [ID]                   BIGINT         IDENTITY (1, 1) NOT NULL,
+    [ProjectID]            BIGINT         NULL,
+    [KEDBOwnedId]          INT            NULL,
+    [ExternalKEDB]         NVARCHAR (250) NULL,
+    [IsApplensAsKEDB]      BIT            NULL,
+    [IsReqBaselined]       BIT            NULL,
+    [IsAcceptanceDefined]  BIT            NULL,
+    [ScopeChangeControlId] INT            NULL,
+    [IsVelocityMeasured]   BIT            NULL,
+    [UOM]                  NVARCHAR (250) NULL,
+    [IsDevOrMainByCog]     BIT            NULL,
+    [IntegratedServiceId]  INT            NULL,
+    [StatusReportId]       INT            NULL,
+    [ExplicitRisks]        NVARCHAR (250) NULL,
+    [CreatedBY]            NVARCHAR (50)  NOT NULL,
+    [CreatedDate]          DATETIME       NOT NULL,
+    [ModifiedBY]           NVARCHAR (50)  NULL,
+    [ModifiedDate]         DATETIME       NULL,
+    [IsDeleted]            BIT            NULL,
+    CONSTRAINT [PK_BestPractices] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_BestPractices_BestPractices] FOREIGN KEY ([KEDBOwnedId]) REFERENCES [MAS].[PPAttributeValues] ([AttributeValueID]),
+    CONSTRAINT [FK_BestPractices_PPAttributeValues] FOREIGN KEY ([ScopeChangeControlId]) REFERENCES [MAS].[PPAttributeValues] ([AttributeValueID]),
+    CONSTRAINT [FK_BestPractices_PPAttributeValues1] FOREIGN KEY ([StatusReportId]) REFERENCES [MAS].[PPAttributeValues] ([AttributeValueID]),
+    CONSTRAINT [FK_BestPractices_PPAttributeValues2] FOREIGN KEY ([IntegratedServiceId]) REFERENCES [MAS].[PPAttributeValues] ([AttributeValueID])
+);
+

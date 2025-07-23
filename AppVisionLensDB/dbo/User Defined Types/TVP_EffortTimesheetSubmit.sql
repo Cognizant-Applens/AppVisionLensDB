@@ -1,0 +1,21 @@
+﻿CREATE TYPE [dbo].[TVP_EffortTimesheetSubmit] AS TABLE (
+    [TicketId]       NVARCHAR (MAX) NULL,
+    [ProjectID]      BIGINT         NULL,
+    [ServiceID]      BIGINT         NULL,
+    [CategoryID]     BIGINT         NULL,
+    [ActivityID]     BIGINT         NULL,
+    [TimesheetDate1] NVARCHAR (MAX) NULL,
+    [TimesheetDate2] NVARCHAR (MAX) NULL,
+    [TimesheetDate3] NVARCHAR (MAX) NULL,
+    [TimesheetDate4] NVARCHAR (MAX) NULL,
+    [TimesheetDate5] NVARCHAR (MAX) NULL,
+    [TimesheetDate6] NVARCHAR (MAX) NULL,
+    [TimesheetDate7] NVARCHAR (MAX) NULL,
+    [EffortDate1]    NVARCHAR (MAX) NULL,
+    [EffortDate2]    NVARCHAR (MAX) NULL,
+    [EffortDate3]    NVARCHAR (MAX) NULL,
+    [EffortDate4]    NVARCHAR (MAX) NULL,
+    [EffortDate5]    NVARCHAR (MAX) NULL,
+    [EffortDate6]    NVARCHAR (MAX) NULL,
+    [EffortDate7]    NVARCHAR (MAX) NULL);
+

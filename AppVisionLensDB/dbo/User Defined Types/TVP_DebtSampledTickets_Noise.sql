@@ -1,0 +1,22 @@
+﻿CREATE TYPE [dbo].[TVP_DebtSampledTickets_Noise] AS TABLE (
+    [ESAProjectID]         NVARCHAR (MAX)  NULL,
+    [TicketID]             NVARCHAR (MAX)  NULL,
+    [TicketDescription]    NVARCHAR (MAX)  NULL,
+    [AdditionalText]       NVARCHAR (1000) NULL,
+    [ApplicationName]      NVARCHAR (MAX)  NULL,
+    [ApplicationType]      NVARCHAR (MAX)  NULL,
+    [Technology]           NVARCHAR (MAX)  NULL,
+    [DebtClassification]   NVARCHAR (50)   NULL,
+    [AvoidableFlag]        NVARCHAR (50)   NULL,
+    [ResidualDebt]         NVARCHAR (50)   NULL,
+    [CauseCode]            NVARCHAR (MAX)  NULL,
+    [ResolutionCode]       NVARCHAR (MAX)  NULL,
+    [MLDebtClassification] NVARCHAR (50)   NULL,
+    [MLAvoidableFlag]      NVARCHAR (50)   NULL,
+    [MLResidualDebt]       NVARCHAR (50)   NULL,
+    [MLCauseCode]          NVARCHAR (MAX)  NULL,
+    [DescBaseWorkPattern]  NVARCHAR (1000) NULL,
+    [DescSubWorkPattern]   NVARCHAR (1000) NULL,
+    [ResBaseWorkPattern]   NVARCHAR (1000) NULL,
+    [ResSubWorkPattern]    NVARCHAR (1000) NULL);
+

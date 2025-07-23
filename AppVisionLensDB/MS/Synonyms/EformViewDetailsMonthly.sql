@@ -1,0 +1,1 @@
+﻿CREATE SYNONYM MS.EformViewDetailsMonthly FOR [$(MainspringDB)].MS.EformViewDetailsMonthly

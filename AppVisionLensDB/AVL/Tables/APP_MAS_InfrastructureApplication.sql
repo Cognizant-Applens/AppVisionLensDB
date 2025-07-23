@@ -1,0 +1,26 @@
+﻿CREATE TABLE [AVL].[APP_MAS_InfrastructureApplication] (
+    [ID]                        BIGINT         IDENTITY (1, 1) NOT NULL,
+    [ApplicationID]             BIGINT         NOT NULL,
+    [VMName]                    NVARCHAR (100) NULL,
+    [OperatingSystem]           NVARCHAR (100) NULL,
+    [ServerConfiguration]       NVARCHAR (100) NULL,
+    [ServerOwner]               NVARCHAR (100) NULL,
+    [LicenseDetails]            NVARCHAR (100) NULL,
+    [DatabaseVersion]           NVARCHAR (100) NULL,
+    [HostedEnvironmentID]       BIGINT         NULL,
+    [AppPlatform]               NVARCHAR (100) NULL,
+    [IsDeleted]                 BIT            NOT NULL,
+    [CreatedBy]                 NVARCHAR (50)  CONSTRAINT [DF_APP_MAS_Infrastructure_Application_CreatedBy] DEFAULT (getdate()) NOT NULL,
+    [CreatedDate]               DATETIME       NOT NULL,
+    [ModifiedBy]                NVARCHAR (50)  NULL,
+    [ModifiedDate]              DATETIME       NULL,
+    [CloudServiceProvider]      INT            NULL,
+    [CloudModelID]              INT            NULL,
+    [OtherCloudServiceProvider] NVARCHAR (100) NULL,
+    CONSTRAINT [PK_APP_MAS_Infrastructure_Application_1] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_APP_MAS_InfrastructureApplication_APP_MAS_ApplicationDetails] FOREIGN KEY ([ApplicationID]) REFERENCES [AVL].[APP_MAS_ApplicationDetails] ([ApplicationID]),
+    CONSTRAINT [FK_APP_MAS_InfrastructureApplication_APP_MAS_HostedEnvironment] FOREIGN KEY ([HostedEnvironmentID]) REFERENCES [AVL].[APP_MAS_HostedEnvironment] ([HostedEnvironmentID]),
+    CONSTRAINT [FK_CloudModel] FOREIGN KEY ([CloudModelID]) REFERENCES [MAS].[MAS_CloudModelProvider] ([CloudModelID]),
+    CONSTRAINT [IX_APP_MAS_Infrastructure_Application] UNIQUE NONCLUSTERED ([ApplicationID] ASC)
+);
+

@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[SCHEMA_LOG] (
+    [id]          INT            IDENTITY (1, 1) NOT NULL,
+    [USER_NAME]   NVARCHAR (255) NULL,
+    [EVT_TYPE]    NVARCHAR (255) NULL,
+    [OBJ_NAME]    NVARCHAR (255) NULL,
+    [OBJ_TYPE]    NVARCHAR (255) NULL,
+    [CREATE_DTTM] DATETIME       NULL,
+    [HOST_NAME]   NVARCHAR (255) NULL
+);
+

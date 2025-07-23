@@ -1,0 +1,25 @@
+﻿CREATE TABLE [ML].[CL_BaseDetails] (
+    [BaseDetailsID]               BIGINT          IDENTITY (1, 1) NOT NULL,
+    [ContLearningID]              BIGINT          NOT NULL,
+    [ProjectID]                   BIGINT          NOT NULL,
+    [TicketID]                    NVARCHAR (50)   NOT NULL,
+    [ApplicationName]             NVARCHAR (250)  NOT NULL,
+    [CauseCode]                   NVARCHAR (50)   NOT NULL,
+    [ResolutionCode]              NVARCHAR (50)   NOT NULL,
+    [DebtClassification]          NVARCHAR (50)   NULL,
+    [AvoidableFlag]               NVARCHAR (50)   NULL,
+    [ResidualDebt]                NVARCHAR (50)   NULL,
+    [TicketDescriptionPattern]    NVARCHAR (2000) NULL,
+    [TicketDescriptionSubPattern] NVARCHAR (2000) NULL,
+    [OptionalFieldpattern]        NVARCHAR (2000) NULL,
+    [OptionalFieldSubPattern]     NVARCHAR (2000) NULL,
+    [Isdeleted]                   BIT             NOT NULL,
+    [CreatedBy]                   NVARCHAR (50)   NOT NULL,
+    [CreatedDate]                 DATETIME        NOT NULL,
+    [ModifiedBy]                  NVARCHAR (50)   NULL,
+    [ModifiedDate]                DATETIME        NULL,
+    CONSTRAINT [PK_BaseDetailsID] PRIMARY KEY CLUSTERED ([BaseDetailsID] ASC),
+    CONSTRAINT [FK_ContLearningID] FOREIGN KEY ([ContLearningID]) REFERENCES [ML].[CL_PRJ_ContLearningState] ([ContLearningID]),
+    CONSTRAINT [FK_ProjectID] FOREIGN KEY ([ProjectID]) REFERENCES [AVL].[MAS_ProjectMaster] ([ProjectID])
+);
+

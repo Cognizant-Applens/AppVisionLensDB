@@ -1,0 +1,1 @@
+﻿CREATE SYNONYM [MS].[ServiceMetricBaseMeasureMapping] FOR [$(MainspringDB)].[MS].[ServiceMetricBaseMeasureMapping]

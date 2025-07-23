@@ -1,0 +1,12 @@
+﻿CREATE TYPE [dbo].[TVP_UpdateUserManagementDetails1] AS TABLE (
+    [EmployeeID]             NVARCHAR (100) NULL,
+    [EmployeeName]           NVARCHAR (100) NULL,
+    [ClientUserID]           NVARCHAR (100) NULL,
+    [CustomerID]             NVARCHAR (100) NULL,
+    [TimezoneID]             INT            NULL,
+    [LocationID]             INT            NULL,
+    [TSApproverID]           NVARCHAR (100) NULL,
+    [MandatoryHours]         DECIMAL (6, 2) NULL,
+    [TicketingModuleEnabled] NVARCHAR (100) NULL,
+    [PODDetailID]            INT            NULL);
+

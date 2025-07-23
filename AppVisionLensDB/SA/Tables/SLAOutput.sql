@@ -1,0 +1,27 @@
+﻿CREATE TABLE [SA].[SLAOutput] (
+    [SLAOutputId]       INT             IDENTITY (1, 1) NOT NULL,
+    [IncidentNumber]    NVARCHAR (15)   NOT NULL,
+    [Priority]          NVARCHAR (100)  DEFAULT (NULL) NULL,
+    [AssignmentGroup]   NVARCHAR (100)  DEFAULT (NULL) NULL,
+    [Tower]             NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [Status]            NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [OpenOn]            DATETIME        DEFAULT (NULL) NULL,
+    [AcknowledgedOn]    DATETIME        DEFAULT (NULL) NULL,
+    [ResolvedOn]        DATETIME        DEFAULT (NULL) NULL,
+    [PendingTime]       INT             DEFAULT (NULL) NULL,
+    [ResponseSla]       INT             DEFAULT (NULL) NULL,
+    [ResolutionSla]     INT             DEFAULT (NULL) NULL,
+    [ResponseSlaMiss]   NVARCHAR (5)    DEFAULT (NULL) NULL,
+    [ResolutionSlaMiss] NVARCHAR (5)    DEFAULT (NULL) NULL,
+    [ReassginmentCount] INT             DEFAULT (NULL) NULL,
+    [AssignedTo]        NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [SLAOutputMonth]    INT             DEFAULT (NULL) NULL,
+    [Tier]              INT             DEFAULT (NULL) NULL,
+    [AgingBy]           DECIMAL (18, 2) DEFAULT (NULL) NULL,
+    [RemainingTime]     INT             DEFAULT (NULL) NULL,
+    [LastUpdate]        DATETIME        DEFAULT (NULL) NULL,
+    [Cluster]           NVARCHAR (50)   DEFAULT (NULL) NULL,
+    [CreatedOn]         DATETIME        DEFAULT (NULL) NULL,
+    PRIMARY KEY CLUSTERED ([SLAOutputId] ASC)
+);
+

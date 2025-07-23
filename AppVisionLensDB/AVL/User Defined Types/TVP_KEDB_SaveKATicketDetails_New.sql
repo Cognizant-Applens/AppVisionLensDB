@@ -1,0 +1,21 @@
+﻿CREATE TYPE [AVL].[TVP_KEDB_SaveKATicketDetails_New] AS TABLE (
+    [KAId]                 BIGINT          NULL,
+    [ProjectId]            BIGINT          NULL,
+    [KATicketID]           NVARCHAR (50)   NULL,
+    [KATitle]              NVARCHAR (1000) NULL,
+    [Status]               NVARCHAR (20)   NULL,
+    [ServiceIds]           NVARCHAR (500)  NULL,
+    [CauseCodeId]          BIGINT          NULL,
+    [ResolutionId]         BIGINT          NULL,
+    [Description]          NVARCHAR (4000) NOT NULL,
+    [KeyWords]             NVARCHAR (300)  NULL,
+    [AuthorName]           NVARCHAR (100)  NULL,
+    [Effort]               NVARCHAR (50)   NULL,
+    [AutomationScope]      NVARCHAR (20)   NULL,
+    [ApprovedOrRejectedBy] NVARCHAR (50)   NULL,
+    [ReviewComments]       NVARCHAR (250)  NULL,
+    [ApplicationId]        INT             NULL,
+    [CreatedBy]            NVARCHAR (50)   NULL,
+    [KTicketId]            NVARCHAR (50)   NULL,
+    [Remarks]              NVARCHAR (500)  NULL);
+

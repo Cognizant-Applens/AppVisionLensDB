@@ -1,0 +1,25 @@
+﻿CREATE TABLE [AVL].[KEDB_TRN_KATicketVersionDetails] (
+    [KAId]                 BIGINT          NOT NULL,
+    [ProjectId]            BIGINT          NULL,
+    [KATicketID]           NVARCHAR (50)   NOT NULL,
+    [KATitle]              NVARCHAR (1000) NULL,
+    [Status]               NVARCHAR (20)   NULL,
+    [AuthorName]           NVARCHAR (100)  NULL,
+    [ApplicationId]        BIGINT          NULL,
+    [CauseCodeId]          BIGINT          NULL,
+    [ResolutionId]         BIGINT          NULL,
+    [Description]          NVARCHAR (4000) NULL,
+    [KeyWords]             NVARCHAR (300)  NULL,
+    [Effort]               DECIMAL (25, 2) NULL,
+    [AutomationScope]      NVARCHAR (20)   NULL,
+    [ApprovedOrRejectedBy] NVARCHAR (50)   NULL,
+    [ReviewComments]       NVARCHAR (250)  NULL,
+    [CreatedBy]            NVARCHAR (50)   NULL,
+    [CreatedOn]            DATETIME        DEFAULT (getdate()) NOT NULL,
+    [ModifiedBy]           NVARCHAR (50)   NULL,
+    [ModifiedOn]           DATETIME        NULL,
+    [IsDeleted]            BIT             DEFAULT ((0)) NULL,
+    [ID]                   BIGINT          IDENTITY (1, 1) NOT NULL,
+    [Remarks]              NVARCHAR (MAX)  NULL
+);
+

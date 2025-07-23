@@ -1,0 +1,20 @@
+﻿CREATE TYPE [dbo].[TVP_MLJobPattern] AS TABLE (
+    [ApplicationName]      NVARCHAR (MAX) NULL,
+    [ApplicationType]      NVARCHAR (MAX) NULL,
+    [Technology]           NVARCHAR (MAX) NULL,
+    [DebtClassification]   NVARCHAR (50)  NULL,
+    [AvoidableFlag]        NVARCHAR (50)  NULL,
+    [ResidualDebt]         NVARCHAR (50)  NULL,
+    [CauseCode]            NVARCHAR (MAX) NULL,
+    [ResolutionCode]       NVARCHAR (MAX) NULL,
+    [MLDebtClassification] NVARCHAR (50)  NULL,
+    [MLAvoidableFlag]      NVARCHAR (50)  NULL,
+    [MLResidualDebt]       NVARCHAR (50)  NULL,
+    [MLCauseCode]          NVARCHAR (MAX) NULL,
+    [MLWorkPattern]        NVARCHAR (MAX) NULL,
+    [MLRuleAccuracy]       NVARCHAR (MAX) NULL,
+    [SMEApproval]          NVARCHAR (50)  NULL,
+    [MLResolutionCode]     NVARCHAR (MAX) NULL,
+    [TicketOccurence]      INT            NULL,
+    [Classifiedby]         NVARCHAR (MAX) NULL);
+

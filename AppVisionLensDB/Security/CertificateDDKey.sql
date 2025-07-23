@@ -1,0 +1,4 @@
+﻿CREATE CERTIFICATE [CertificateDDKey]
+    AUTHORIZATION [dbo]
+    WITH SUBJECT = N'Certificate For DD Encryption Key Storage', START_DATE = N'2020-01-01T00:00:00', EXPIRY_DATE = N'2020-12-31T00:00:00';
+

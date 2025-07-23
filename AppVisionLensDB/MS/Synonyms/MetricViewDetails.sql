@@ -1,0 +1,1 @@
+﻿CREATE SYNONYM [MS].[MetricViewDetails] FOR [$(MainspringDB)].[MS].[MetricViewDetails]

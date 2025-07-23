@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [AVL]
+    AUTHORIZATION [dbo];
+

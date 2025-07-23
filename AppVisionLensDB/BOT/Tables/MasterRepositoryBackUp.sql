@@ -1,0 +1,26 @@
+﻿CREATE TABLE [BOT].[MasterRepositoryBackUp] (
+    [Id]                     BIGINT          IDENTITY (1, 1) NOT NULL,
+    [BotName]                NVARCHAR (100)  NOT NULL,
+    [Overview]               NVARCHAR (500)  NULL,
+    [Description]            NVARCHAR (4000) NULL,
+    [BotTargetApplicationId] BIGINT          NULL,
+    [TechnologyId]           BIGINT          NULL,
+    [BotCategoryId]          BIGINT          NULL,
+    [BotNatureId]            BIGINT          NULL,
+    [BotTypeId]              BIGINT          NULL,
+    [BotReusabilityId]       BIGINT          NULL,
+    [BusinessProcessId]      BIGINT          NULL,
+    [SubBusinessProcessId]   BIGINT          NULL,
+    [ServiceId]              INT             NULL,
+    [Author]                 NVARCHAR (50)   NULL,
+    [ContactDL]              NVARCHAR (255)  NULL,
+    [IsManuallyCreated]      BIT             NULL,
+    [BotStatusId]            INT             NULL,
+    [IsDeleted]              BIT             NULL,
+    [CreatedBy]              NVARCHAR (50)   NULL,
+    [CreatedOn]              DATETIME        NULL,
+    [ModifiedBy]             NVARCHAR (50)   NULL,
+    [ModifiedOn]             DATETIME        NULL,
+    CONSTRAINT [PK_MasterRepositoryBackUp] PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

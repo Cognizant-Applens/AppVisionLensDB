@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [BCS]
+    AUTHORIZATION [dbo];
+

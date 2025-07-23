@@ -1,0 +1,1 @@
+﻿CREATE SYNONYM [MS].[JobStatus] FOR [$(MainspringDB)].[MS].[JobStatus]

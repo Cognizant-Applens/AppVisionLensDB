@@ -1,0 +1,26 @@
+﻿CREATE TABLE [AVL].[APP_MAS_Extended_ApplicationDetail] (
+    [ID]                 BIGINT         IDENTITY (1, 1) NOT NULL,
+    [ApplicationID]      BIGINT         NOT NULL,
+    [UserBase]           NVARCHAR (50)  NULL,
+    [SupportWindowID]    BIGINT         NULL,
+    [Incallwdgreen]      NVARCHAR (50)  NULL,
+    [Infraallwdgreen]    NVARCHAR (50)  NULL,
+    [Infoallwdgreen]     NVARCHAR (50)  NULL,
+    [Incallwdamber]      NVARCHAR (50)  NULL,
+    [Infraallwdamber]    NVARCHAR (50)  NULL,
+    [Infoallwdamber]     NVARCHAR (50)  NULL,
+    [SupportCategoryID]  BIGINT         NULL,
+    [ProcessingTypeID]   BIGINT         NULL,
+    [CreatedBy]          NVARCHAR (50)  NULL,
+    [CreatedDate]        DATETIME       CONSTRAINT [DF_APP_MAS_Extended_ApplicationDetails_CreatedDate] DEFAULT (getdate()) NULL,
+    [ModifiedBy]         NVARCHAR (50)  NULL,
+    [ModifiedDate]       DATETIME       NULL,
+    [OtherSupportWindow] NVARCHAR (100) NULL,
+    CONSTRAINT [PK_APP_MAS_Extended_ApplicationDetails] PRIMARY KEY CLUSTERED ([ID] ASC),
+    CONSTRAINT [FK_APP_MAS_Extended_ApplicationDetail_APP_MAS_ApplicationDetails] FOREIGN KEY ([ApplicationID]) REFERENCES [AVL].[APP_MAS_ApplicationDetails] ([ApplicationID]),
+    CONSTRAINT [FK_APP_MAS_Extended_ApplicationDetail_APP_MAS_ProcessingType] FOREIGN KEY ([ProcessingTypeID]) REFERENCES [AVL].[APP_MAS_ProcessingType] ([ProcessingTypeID]),
+    CONSTRAINT [FK_APP_MAS_Extended_ApplicationDetail_APP_MAS_SupportCategory] FOREIGN KEY ([SupportCategoryID]) REFERENCES [AVL].[APP_MAS_SupportCategory] ([SupportCategoryID]),
+    CONSTRAINT [FK_APP_MAS_Extended_ApplicationDetail_APP_MAS_SupportWindow] FOREIGN KEY ([SupportWindowID]) REFERENCES [AVL].[APP_MAS_SupportWindow] ([SupportWindowID]),
+    CONSTRAINT [IX_APP_MAS_Extended_ApplicationDetails] UNIQUE NONCLUSTERED ([ApplicationID] ASC)
+);
+

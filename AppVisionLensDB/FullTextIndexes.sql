@@ -1,0 +1,26 @@
+﻿CREATE FULLTEXT INDEX ON [AVL].[KEDB_TRN_KATicketActivityDetails]
+    ([ActivityDescription] LANGUAGE 1033)
+    KEY INDEX [PK_KEDB_TRN_KATicketActivityDetails]
+    ON [FTCActivityDesc];
+
+
+GO
+CREATE FULLTEXT INDEX ON [AVL].[KEDB_TRN_KATicketDetails]
+    ([KATitle] LANGUAGE 1033, [Description] LANGUAGE 1033, [KeyWords] LANGUAGE 1033)
+    KEY INDEX [PK_KEDB_TRN_KATicketDetails]
+    ON [FTCDesc];
+
+
+GO
+CREATE FULLTEXT INDEX ON [AVL].[DEBT_MAP_CauseCode]
+    ([CauseCode] LANGUAGE 1033)
+    KEY INDEX [PK__DEBT_MAP__BC664993876E5707]
+    ON [FTCCCRC];
+
+
+GO
+CREATE FULLTEXT INDEX ON [AVL].[DEBT_MAP_ResolutionCode]
+    ([ResolutionCode] LANGUAGE 1033)
+    KEY INDEX [PK__DEBT_MAP__26CB8DFD4CA89B90]
+    ON [FTCCCRC];
+
